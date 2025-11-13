@@ -24,6 +24,18 @@
   </material>
 
   <link name="base_link"/>
+
+  <!-- BASE_FOOTPRINT LINK -->
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_footprint">
+  </link>
+
   <!-- CHASSIS -->
   <link name="chassis">
     <visual>
@@ -39,7 +51,7 @@
         <box size="0.3 0.3 0.15"/>
       </geometry>
     </collision>
-    <xacro:inertial_box mass="0.05" x="0.3" y="0.03" z="0.15">
+    <xacro:inertial_box mass="0.5" x="0.3" y="0.3" z="0.15">
       <origin xyz="0.15 0 0.075" rpy="0 0 0" />
     </xacro:inertial_box>
   </link>
@@ -109,6 +121,8 @@
   <gazebo reference="right_wheel">
     <material>Gazebo/Blue</material>
   </gazebo>
+
+
   <!-- CASTER WHEEL LINK-->
   <joint name="caster_wheel_joint" type="fixed">
     <parent link="chassis"/>
