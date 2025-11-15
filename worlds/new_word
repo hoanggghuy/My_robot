@@ -18,6 +18,17 @@
         <falloff>0</falloff>
       </spot>
     </light>
+    </model>
+    <model name='Construction Barrel_1'>
+      <pose>-5.31082 -2.23709 -0 0 -0 -7e-06</pose>
+      <scale>1 1 1</scale>
+      <link name='link'>
+        <pose>-5.31082 -2.23709 -0 0 -0 -7e-06</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>-3.87743 -2.8936 0.727843 -2.17783 0.268134 -3.13538</acceleration>
+        <wrench>-1938.71 -1446.8 363.922 0 -0 0</wrench>
+      </link>
+    </model>    
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>
